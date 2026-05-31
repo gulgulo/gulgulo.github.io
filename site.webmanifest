@@ -1,0 +1,14 @@
+{
+  "name": "Gulgulo",
+  "short_name": "Gulgulo",
+  "description": "A small software studio, a quiet home for products built slowly and with care.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#B5532A",
+  "theme_color": "#B5532A",
+  "icons": [
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png", "purpose": "any" },
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
