@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gulgulo, a small software studio</title>
-<meta name="description" content="Gulgulo, the Konkani word for a handmade clay water pot, is a small studio, a quiet home for software built slowly and with care: Timebase, Shio, Stem, Medivalent, Samooh and Dhuni.">
+<meta name="description" content="Gulgulo, the Konkani word for a clay pot that keeps water cool, is an indie studio building intentional products with care: Timebase, Shio, Stem, Medivalent, Samooh and Dhuni.">
 <meta name="author" content="amrith">
 <meta name="theme-color" content="#B5532A">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -19,7 +19,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Gulgulo">
 <meta property="og:title" content="Gulgulo, a small software studio">
-<meta property="og:description" content="The Konkani word for a handmade clay water pot, and a quiet home for software built slowly and with care.">
+<meta property="og:description" content="The Konkani word for a clay pot that keeps water cool. An indie studio building intentional products with care.">
 <meta property="og:url" content="https://gulgulo.github.io/">
 <meta property="og:image" content="https://gulgulo.github.io/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -30,7 +30,7 @@
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Gulgulo, a small software studio">
-<meta name="twitter:description" content="The Konkani word for a handmade clay water pot, and a quiet home for software built slowly and with care.">
+<meta name="twitter:description" content="The Konkani word for a clay pot that keeps water cool. An indie studio building intentional products with care.">
 <meta name="twitter:image" content="https://gulgulo.github.io/og-image.png">
 <meta name="twitter:image:alt" content="The Gulgulo mark, a handmade terracotta water pot, on fired clay.">
 
@@ -137,16 +137,39 @@
 
   /* ============ MOBILE ============ */
   @media (max-width:720px){
-    body{ overflow:auto; }
-    .stage{ position:static; min-height:100%; }
-    .hero{ padding:90px 24px 0; }
-    .word{ font-size:52px; }
-    .rail{ flex-direction:column; gap:22px; padding:54px 24px 80px; }
-    .sep{ width:34px; height:1px; }
-    .cluster{ flex-wrap:wrap; justify-content:center; }
-    .product::after{ position:static; transform:none; display:block; opacity:.7; margin-top:3px; }
-    .credit{ position:static; display:inline-block; text-align:center; }
-    .credit.left, .credit.right{ left:auto; right:auto; }
+    html, body{ height:auto; }
+    body{ overflow-x:hidden; overflow-y:auto; }
+
+    .stage{
+      position:static; inset:auto; min-height:100vh; min-height:100dvh;
+      justify-content:flex-start; align-items:center;
+      padding:58px 26px 46px;
+    }
+
+    /* reorder the absolute corners into the natural flow, at the foot */
+    .credit{ position:static; top:auto; left:auto; right:auto; text-align:center; opacity:.74; }
+    .credit.left{ order:5; margin-top:44px; }
+    .credit.right{ order:6; margin-top:7px; }
+
+    .hero{ order:1; flex:0 0 auto; padding:0; }
+    .pot{ width:144px; height:auto; }
+    .word{ font-size:46px; margin-top:20px; }
+    .lead{ font-size:15.5px; line-height:1.5; margin-top:16px; max-width:34rem; }
+    .lead span + span{ margin-top:10px; }
+
+    /* products become a calm vertical list */
+    .rail{ order:2; flex-direction:column; align-items:center; flex-wrap:nowrap; gap:26px; padding:46px 0 0; }
+    .cluster{ flex-direction:column; align-items:center; gap:26px; }
+    .cluster.india{ gap:22px; }
+    .product{ text-align:center; font-size:21px; opacity:.95; }
+    .product.sub{ font-size:18px; opacity:.8; }
+    .product::after{
+      position:static; transform:none; display:block; white-space:normal;
+      opacity:.66; margin-top:6px; font-size:13px; max-width:26rem;
+    }
+    .product:hover::after, .product:focus-visible::after{ transform:none; }
+    .sep{ width:44px; height:1px; }
+    .amp{ display:none; }
   }
 </style>
 </head>
@@ -165,21 +188,21 @@
         <path class="thin" d="M 20,61 Q 50,66.5 80,61"></path>
       </svg>
       <h1 class="word">Gulgulo</h1>
-      <p class="lead"><span>The Konkani word for a handmade terracotta pot that keeps water cool and sweet.</span><span>A home for a handful of small, intentional products, made slowly and with care.</span></p>
+      <p class="lead"><span>The Konkani word for a clay pot that keeps water cool.</span><span>An indie studio building intentional products with care.</span></p>
     </header>
 
     <nav class="rail" aria-label="Products">
       <div class="cluster global">
-        <a class="product" href="https://timebase.me" target="_blank" rel="noopener" data-tag="planning, across time zones">Timebase</a>
+        <a class="product" href="https://timebase.me" target="_blank" rel="noopener" data-tag="every time zone, at a glance">Timebase</a>
         <a class="product" href="https://shio.sh" target="_blank" rel="noopener" data-tag="a terminal for the agent era">Shio</a>
         <a class="product" href="https://stem.md" target="_blank" rel="noopener" data-tag="trails worth following">Stem</a>
         <a class="product" href="https://medivalent.com" target="_blank" rel="noopener" data-tag="medicine, across borders">Medivalent</a>
       </div>
       <span class="sep" aria-hidden="true"></span>
       <div class="cluster india">
-        <a class="product" href="https://samooh.com" target="_blank" rel="noopener" data-tag="a community for Indian-origin founders">Samooh</a>
+        <a class="product" href="https://samooh.com" target="_blank" rel="noopener" data-tag="a home for Indian-origin founders">Samooh</a>
         <span class="amp" aria-hidden="true">&amp;</span>
-        <a class="product sub" href="https://dhuni.net" target="_blank" rel="noopener" data-tag="its radio, Indian classical for deep focus">Dhuni</a>
+        <a class="product sub" href="https://dhuni.net" target="_blank" rel="noopener" data-tag="Indian classical, for deep focus">Dhuni</a>
       </div>
     </nav>
 
@@ -201,7 +224,7 @@
         "height": 180
       },
       "image": "https://gulgulo.github.io/og-image.png",
-      "slogan": "A quiet home for software built slowly, with care.",
+      "slogan": "An indie studio building intentional products with care.",
       "description": "Gulgulo is a small, independent software studio. The name is the Konkani word for a gulgulo \u2014 a handmade terracotta water pot, with a clay body and clay lid, that keeps water cool and gives it a soft, mineral taste. Gulgulo is the quiet home for a handful of products, each built slowly and with care.",
       "disambiguatingDescription": "Gulgulo (Konkani): a handmade terracotta water pot. Here, the name of an independent software studio.",
       "founder": {

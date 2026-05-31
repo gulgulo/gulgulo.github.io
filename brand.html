@@ -112,6 +112,21 @@
     .mark-hero{ grid-template-columns:1fr; }
     .variants,.colorways,.swatches,.pairing{ grid-template-columns:1fr 1fr; }
     .sec-note{ display:none; }
+    .sec-title{ font-size:26px; }
+    /* scale row is a fixed-width flex strip — let it wrap instead of overflowing */
+    .scale-row{ flex-wrap:wrap; gap:24px; }
+    .scale-row .sr-item:last-child{ margin-left:0 !important; max-width:none !important; }
+    /* big type specimens stack so they don't run off the row */
+    .ts{ flex-wrap:wrap; gap:6px 24px; }
+    .ts .lbl{ width:auto; }
+    .serif-sample{ font-size:40px !important; }
+  }
+
+  @media (max-width:420px){
+    .lockup .word{ font-size:54px; }
+    .variants,.colorways,.swatches,.pairing{ grid-template-columns:1fr; }
+    .type-block{ padding:28px 22px; }
+    .pcard{ padding:26px 22px; }
   }
 </style>
 </head>
