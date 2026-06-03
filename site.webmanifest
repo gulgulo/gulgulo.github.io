@@ -1,7 +1,7 @@
 {
   "name": "Gulgulo",
   "short_name": "Gulgulo",
-  "description": "A small software studio, a quiet home for products built slowly and with care.",
+  "description": "The Konkani word for a handmade terracotta pot that keeps water cool. A small artifact, in memory of my mamama.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
